@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "id": "djcatla.trackhelper",
     "author": {
@@ -112,4 +113,120 @@
             "allowParallel": true
         }
     ]
+=======
+{
+    "id": "djcatla.trackhelper",
+    "author": {
+        "name": "Cato Larsen - DJ Catla",
+        "discordUsername": "lostlogic",
+		"email": "dj@catla.no"
+    },
+    "actions": [
+        {
+            "id": "set.memorycue",
+            "name": "Change named Cuepoints to Rekordbox Memory Cues",
+            "description": "This action will search the selected songs for cue points with the text in the settings and change it to memory cue for Rekordbox. The cues will be moved to the Sort from Position value in ascending order by start time.",
+            "config": {
+                "permissions": {
+                    "track": {
+                        "read": [
+                            "selected"
+                        ],
+                        "modify": [
+                            "selected"
+                        ],
+                        "modifyFields": [
+                            "cuepoints"
+                        ]
+                    }
+                },
+				"settings": {
+					"Memory Cue Text Match": "RBM",
+                    "Text Location": "End",
+					"Sort from Position": "17",
+					"Remove Cue Text after switch": "false"
+				}                
+            },
+            "allowParallel": true
+        },
+		{
+            "id": "set.duplicatecuestomemory",
+            "name": "Copy All Hot Cues to Rekordbox Memory Cues",
+            "description": "This action will copy all regular cue points and add them as memory cues for Rekordbox. It will be prefixed (Text Location: Start) or suffixed (Text Location: End) by the Text Add field.",
+            "config": {
+                "permissions": {
+                    "track": {
+                        "read": [
+                            "all"
+                        ],
+                        "modify": [
+                            "all"
+                        ],
+                        "modifyFields": [
+                            "cuepoints"
+                        ]
+                    }
+                },
+				"settings": {
+					"Memory Cue Text Add": "RBM",
+                    "Text Location": "End",
+					"Sort from Position": "17",
+					"Include Loops": "false"
+				}                
+            },
+            "allowParallel": true
+        },
+        {
+            "id": "set.mixablekeys",
+            "name": "Set Mixable Keys",
+            "description": "This action will write Mixable Keys to the selected field based on the selected track(s) key. Vaid fields to be written to is comment, extra1 and extra2.",
+            "config": {
+                "permissions": {
+                    "track": {
+                        "read": [
+                            "selected"
+                        ],
+                        "modify": [
+                            "selected"
+                        ],
+                        "modifyFields": [
+                            "comment",
+                            "extra1",
+                            "extra2"
+                        ]
+                    }
+                },
+				"settings": {
+					"Mixable Keys Field": "Extra2"
+				}
+            },
+            "allowParallel": true
+        },
+		{
+            "id": "set.energytorating",
+            "name": "Set Energy to Rating",
+            "description": "This action will add the energy rating to the Composer field, as well as the Rating field.",
+            "config": {
+                "permissions": {
+                    "track": {
+                        "read": [
+                            "selected"
+                        ],
+                        "modify": [
+                            "selected"
+                        ],
+                        "modifyFields": [
+                            "composer",
+                            "rating"
+                        ]
+                    }
+                },
+				"settings": {
+					"Energy Rating Emoji": "⭐"
+				}
+            },
+            "allowParallel": true
+        }
+    ]
+>>>>>>> LexiconDJ-Plugin/main
 }
