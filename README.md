@@ -17,11 +17,17 @@ So if you have hotcue 1-8 filled up, it will copy them, add the text value defin
 
 Set Energy to Rating
 - Reads the Energy rating in Lexicon and set it accordingly to Composer and the Rating field. 
+
  1-2 Energy: ⭐
+
  3-4 Energy: ⭐⭐
+
  5-6 Energy: ⭐⭐⭐
+
  7-8 Energy: ⭐⭐⭐⭐
+
 9-10 Energy: ⭐⭐⭐⭐⭐
+
 
 You may define the emoji used for the Composer field. For the rating field, it will set it according to the energy represented above.
 
