@@ -15,7 +15,7 @@ So if you have hotcue 1-8 filled up, it will copy them, add the text value defin
 
 ## Overview of other operations
 
-Set Energy to Rating
+**Set Energy to Rating**
 - Reads the Energy rating in Lexicon and set it accordingly to Composer and the Rating field. 
 
  1-2 Energy: ⭐
@@ -31,9 +31,12 @@ Set Energy to Rating
 
 You may define the emoji used for the Composer field. For the rating field, it will set it according to the energy represented above.
 
-Set Mixable Keys
+**Set Mixable Keys**
 - Reads the current key (Must be Camelot) and calculates the mixable keys and writes it to one of the fields: "comment", "extra1" or "extra2"
 
 The keys written are: Key +1 and -1, Mayor Up/down and [Semitone -1 / Semitone +1]
 
 Semitones are what you get when you increase or decrease the tone of the song. It's most often used when Fuzzy Key Mixing allowing you to stay within the +-1 Key or Mayor up/down of a song without it sounding absolute rubbish.
+
+**Get tags from iTunes**
+Searches the iTunes API for the selected track(s) and grabs Genre, Album and release Year. IF the setting is set to Overwrite : true, it will overwrite the tags. If it's set to false it will just write to the tags that are empty.
