@@ -49,7 +49,6 @@ while (trackBatch.length > 0) {
 					break;
 					default:
 						throw new Error(`Warning: Unknown cueTextLocation "${cueTextLocation}" for track "${track.artist} - ${track.title}".`);
-					break;
 				}
 			
 				if(!newMemoryCue.data) {

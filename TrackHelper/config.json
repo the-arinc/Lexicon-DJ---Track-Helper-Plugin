@@ -61,6 +61,37 @@
             "allowParallel": true
         },
         {
+            "id": "set.itunestags",
+            "name": "Get tags from iTunes",
+            "description": "Fetch metadata for a song from iTunes. Overwrites existing tags",
+            "config": {
+                "permissions": {
+                    "track": {
+                        "read": [
+                            "selected"
+                        ],
+                        "modify": [
+                            "selected"
+                        ],
+                        "modifyFields": [
+                            "genre",
+                            "year",
+                            "albumTitle"
+                        ]
+                    },
+                    "network": {
+                        "GET": [
+                            "apple.com"
+                        ]
+                    }
+                },
+				"settings": {
+					"Overwrite": "true"
+				}
+            },
+            "allowParallel": true
+        },
+        {
             "id": "set.mixablekeys",
             "name": "Set Mixable Keys",
             "description": "This action will write Mixable Keys to the selected field based on the selected track(s) key. Vaid fields to be written to is comment, extra1 and extra2.",
