@@ -21,9 +21,9 @@ for (const track of _vars.tracksSelected) {
 
         const userDialogOptions = {
             input: "select",
-            message: `Select the the best match for Artist: ${track.artist} - ${track.title} - Duration: ${Math.round(track.duration)} or click Skip to search the next track`,
+            message: `Select the the best match for\n\nTitle: ${track.title}\nArtist: ${track.artist}\nDuration: ${Math.round(track.duration)} sec\n\nClick Skip to search the next track`,
             options: resultArray,
-            type: "success",
+            type: "primary",
             confirmLabel: "Save Metadata",
             skipLabel: "Skip"
         };
