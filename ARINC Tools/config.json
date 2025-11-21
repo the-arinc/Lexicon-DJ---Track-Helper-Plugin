@@ -7,6 +7,32 @@
     },
     "actions": [
         {
+            "id": "set.memorycuenosort",
+            "name": "Change named Cuepoints to Rekordbox Memory Cues",
+            "description": "This action will search the selected songs for cue points with the text in the settings and change it to memory cue for Rekordbox.",
+            "config": {
+                "permissions": {
+                    "track": {
+                        "read": [
+                            "selected"
+                        ],
+                        "modify": [
+                            "selected"
+                        ],
+                        "modifyFields": [
+                            "cuepoints"
+                        ]
+                    }
+                },
+				"settings": {
+					"Memory Cue Text Match": "*",
+                    "Text Location": "Start",
+					"Remove Cue Text after switch": "false"
+				}
+            },
+            "allowParallel": true
+        },
+        {
             "id": "set.sortcueorder",
             "name": "Sort cues after given position",
             "description": "This action will sort cues after the user specififed position. The cues will be moved to the Sort from Position value in ascending order by start time.",
@@ -27,6 +53,31 @@
 				"settings": {
 
 					"Sort from Position": "9"
+				}
+            },
+            "allowParallel": true
+        },
+        {
+            "id": "set.convertblankdropcues",
+            "name": "Convert first 4 blank drop hot cues to new template",
+            "description": "Convert first 4 blank purple/lilac and green hot cues to requested memory/hot cues when criteria match.",
+            "config": {
+                "permissions": {
+                    "track": {
+                        "read": [
+                            "selected"
+                        ],
+                        "modify": [
+                            "selected"
+                        ],
+                        "modifyFields": [
+                            "cuepoints"
+                        ]
+                    }
+                },
+				"settings": {
+
+					
 				}
             },
             "allowParallel": true
